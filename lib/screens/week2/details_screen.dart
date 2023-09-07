@@ -3,6 +3,7 @@ import 'package:my_ebook/screens/week1/chapter1.dart';
 import 'package:my_ebook/screens/week1/chapter2.dart';
 import 'package:my_ebook/screens/week1/chapter3.dart';
 import 'package:my_ebook/screens/week2/chapter1.dart';
+import 'package:my_ebook/screens/week2/chapter2.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,7 @@ class DetailsScreen2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Heap",
+                        name: "Heap 1",
                         tag: "All of us",
                         press: () {
                           Navigator.push(
@@ -59,6 +60,20 @@ class DetailsScreen2 extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (context) {
                                 return W2C1();
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                      ChapterCard(
+                        name: "Heap 2",
+                        tag: "All of us",
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return W2C2();
                               },
                             ),
                           );
