@@ -5,7 +5,7 @@ import 'package:my_ebook/screens/week1/chapter3.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
-class DetailsScreen1 extends StatelessWidget {
+class DetailsScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
