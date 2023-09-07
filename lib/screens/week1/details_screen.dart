@@ -3,9 +3,17 @@ import 'package:my_ebook/screens/week1/chapter1.dart';
 import 'package:my_ebook/screens/week1/chapter2.dart';
 import 'package:my_ebook/screens/week1/chapter3.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen1 extends StatelessWidget {
+  _launchURL() async {
+    final Uri url = Uri.parse('https://colab.research.google.com/drive/1tTYHm2QFfcuwA8SI_oayJGIoWp-vbSQq?usp=sharing');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -84,6 +92,10 @@ class DetailsScreen1 extends StatelessWidget {
                           );
                         },
                       ),
+                      ChapterCard(
+                          name: "MST code",
+                          tag: "Developer",
+                          press: _launchURL),
                       SizedBox(height: 10),
                     ],
                   ),
@@ -208,7 +220,7 @@ class BookInfo extends StatelessWidget {
                             padding:
                                 EdgeInsets.only(top: this.size.height * .02),
                             child: Text(
-                              "When the earth was flat andeveryone wanted to win the gameof the best and people and winning with an A game with all the things you have.",
+                              "What we learn from week1",
                               maxLines: 5,
                               style: TextStyle(
                                 fontSize: 10,

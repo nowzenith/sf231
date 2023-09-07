@@ -2,10 +2,18 @@ import 'package:my_ebook/consttants.dart';
 import 'package:my_ebook/screens/week1/chapter1.dart';
 import 'package:my_ebook/screens/week1/chapter2.dart';
 import 'package:my_ebook/screens/week1/chapter3.dart';
+import 'package:my_ebook/screens/week2/chapter1.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen2 extends StatelessWidget {
+  _launchURL() async {
+    final Uri url = Uri.parse('https://colab.research.google.com/drive/1c9bpLcltmmY2YCeY8Hoqbg_yKot-EXCa?usp=sharing');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -43,47 +51,23 @@ class DetailsScreen2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Data Representation",
-                        tag: "Net",
+                        name: "Heap",
+                        tag: "All of us",
                         press: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return W1C1();
+                                return W2C1();
                               },
                             ),
                           );
                         },
                       ),
                       ChapterCard(
-                        name: "Memory",
-                        tag: "Pruek",
-                        press: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return W1C2();
-                              },
-                            ),
-                          );
-                        },
-                      ),
-                      ChapterCard(
-                        name: "Minimum Spanning Tree",
-                        tag: "Bame",
-                        press: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return W1C3();
-                              },
-                            ),
-                          );
-                        },
-                      ),
+                          name: "Heap code",
+                          tag: "Developer",
+                          press: _launchURL),
                       SizedBox(height: 10),
                     ],
                   ),
@@ -195,7 +179,7 @@ class BookInfo extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     alignment: Alignment.centerLeft,
-                    child: Text("Week 1",
+                    child: Text("Week 2",
                         style: Theme.of(context).textTheme.headlineSmall),
                   ),
                   Row(
@@ -208,7 +192,7 @@ class BookInfo extends StatelessWidget {
                             padding:
                                 EdgeInsets.only(top: this.size.height * .02),
                             child: Text(
-                              "When the earth was flat andeveryone wanted to win the gameof the best and people and winning with an A game with all the things you have.",
+                              "What we learn from week2",
                               maxLines: 5,
                               style: TextStyle(
                                 fontSize: 10,
@@ -249,7 +233,7 @@ class BookInfo extends StatelessWidget {
               child: Container(
                 color: Colors.transparent,
                 child: Image.asset(
-                  "assets/images/W1.png",
+                  "assets/images/W2.png",
                   height: double.infinity,
                   alignment: Alignment.topRight,
                   fit: BoxFit.fitWidth,
