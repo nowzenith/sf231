@@ -1,13 +1,13 @@
 import 'package:my_ebook/consttants.dart';
-import 'package:my_ebook/screens/week2/chapter1.dart';
-import 'package:my_ebook/screens/week2/chapter2.dart';
+import 'package:my_ebook/screens/week3/chapter1.dart';
+import 'package:my_ebook/screens/week3/chapter2.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
-class DetailsScreen2 extends StatelessWidget {
+class DetailsScreen3 extends StatelessWidget {
   _launchURL() async {
-    final Uri url = Uri.parse('https://colab.research.google.com/drive/1c9bpLcltmmY2YCeY8Hoqbg_yKot-EXCa?usp=sharing');
+    final Uri url = Uri.parse('https://colab.research.google.com/drive/1drTYUhSTOM6vU9m2rjGRz6GP890WFP0D?usp=sharing');
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }
@@ -49,35 +49,35 @@ class DetailsScreen2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Heap 1",
+                        name: "Breadth First Search",
                         tag: "All of us",
                         press: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return W2C1();
+                                return W3C1();
                               },
                             ),
                           );
                         },
                       ),
                       ChapterCard(
-                        name: "Heap 2",
+                        name: "Depth First Search",
                         tag: "All of us",
                         press: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return W2C2();
+                                return W3C2();
                               },
                             ),
                           );
                         },
                       ),
                       ChapterCard(
-                          name: "Heap code",
+                          name: "bfs&dfs code",
                           tag: "Developer",
                           press: _launchURL),
                       SizedBox(height: 10),
@@ -191,7 +191,7 @@ class BookInfo extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     alignment: Alignment.centerLeft,
-                    child: Text("Week 2",
+                    child: Text("Week 3",
                         style: Theme.of(context).textTheme.headlineSmall),
                   ),
                   Row(
@@ -204,7 +204,7 @@ class BookInfo extends StatelessWidget {
                             padding:
                                 EdgeInsets.only(top: this.size.height * .02),
                             child: Text(
-                              "What we learn from week2",
+                              "What we learn from week3",
                               maxLines: 5,
                               style: TextStyle(
                                 fontSize: 10,
@@ -245,7 +245,7 @@ class BookInfo extends StatelessWidget {
               child: Container(
                 color: Colors.transparent,
                 child: Image.asset(
-                  "assets/images/W2.png",
+                  "assets/images/W3.png",
                   height: double.infinity,
                   alignment: Alignment.topRight,
                   fit: BoxFit.fitWidth,
