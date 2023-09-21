@@ -5,6 +5,8 @@ import 'package:my_ebook/screens/week2/chapter1.dart';
 import 'package:my_ebook/screens/week2/details_screen.dart';
 import 'package:my_ebook/screens/week3/chapter1.dart';
 import 'package:my_ebook/screens/week3/details_screen.dart';
+import 'package:my_ebook/screens/week4/chapter1.dart';
+import 'package:my_ebook/screens/week4/details_screen.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
 import 'package:my_ebook/widgets/reading_card_list.dart';
 import 'package:my_ebook/widgets/two_side_rounded_button.dart';
@@ -123,6 +125,30 @@ class HomeScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => DetailsScreen3()),
+                            );
+                          },
+                        ),
+                        ReadingListCard(
+                          image: "assets/images/W4.png",
+                          title: "Week4",
+                          auth: "SF1212312121",
+                          rating: 4.7,
+                          pressRead: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsScreen4()),
+                            );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => W4C1()),
+                            );
+                          },
+                          pressDetails: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsScreen4()),
                             );
                           },
                         ),
