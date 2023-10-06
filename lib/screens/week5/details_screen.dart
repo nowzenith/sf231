@@ -1,16 +1,12 @@
 import 'package:my_ebook/consttants.dart';
-import 'package:my_ebook/screens/week4/chapter1.dart';
+import 'package:my_ebook/screens/week5/chapter1.dart';
+import 'package:my_ebook/screens/week5/chapter2.dart';
+import 'package:my_ebook/screens/week5/chapter3.dart';
+import 'package:my_ebook/screens/week5/chapter4.dart';
 import 'package:my_ebook/widgets/book_rating.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
-class DetailsScreen4 extends StatelessWidget {
-  _launchURL() async {
-    final Uri url = Uri.parse('https://colab.research.google.com/drive/1q4HahtPd2BEmZeMBKV7STXyTi2_GBnal?usp=sharing');
-    if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
-    }
-  }
+class DetailsScreen5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -48,23 +44,61 @@ class DetailsScreen4 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Dijkstra's Algorithm",
+                        name: "Expression Tree",
                         tag: "All of us",
                         press: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return W4C1();
+                                return W5C1();
                               },
                             ),
                           );
                         },
                       ),
                       ChapterCard(
-                          name: "Dijkstra's code",
-                          tag: "Developer",
-                          press: _launchURL),
+                        name: "Proof",
+                        tag: "All of us",
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return W5C2();
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                      ChapterCard(
+                        name: "Number",
+                        tag: "All of us",
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return W5C3();
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                      ChapterCard(
+                        name: "Huffman Coding",
+                        tag: "All of us",
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return W5C4();
+                              },
+                            ),
+                          );
+                        },
+                      ),
                       SizedBox(height: 10),
                     ],
                   ),
@@ -176,7 +210,7 @@ class BookInfo extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     alignment: Alignment.centerLeft,
-                    child: Text("Week 4",
+                    child: Text("Week 5",
                         style: Theme.of(context).textTheme.headlineSmall),
                   ),
                   Row(
@@ -189,7 +223,7 @@ class BookInfo extends StatelessWidget {
                             padding:
                                 EdgeInsets.only(top: this.size.height * .02),
                             child: Text(
-                              "What we learn from week4",
+                              "What we learn from week5",
                               maxLines: 5,
                               style: TextStyle(
                                 fontSize: 10,
@@ -230,7 +264,7 @@ class BookInfo extends StatelessWidget {
               child: Container(
                 color: Colors.transparent,
                 child: Image.asset(
-                  "assets/images/W4.png",
+                  "assets/images/W5.png",
                   height: double.infinity,
                   alignment: Alignment.topRight,
                   fit: BoxFit.fitWidth,

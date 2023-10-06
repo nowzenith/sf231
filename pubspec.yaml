@@ -70,6 +70,9 @@ flutter:
     - assets/images/W2C2/
     - assets/images/W3C1/
     - assets/images/W3C2/
+    - assets/images/W5C1/
+    - assets/images/W5C3/
+    - assets/images/W5C4/
     - assets/audios/
     - assets/videos/
   #   - images/a_dot_ham.jpeg
