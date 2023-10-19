@@ -14,6 +14,7 @@ class _W1C1State extends State<W1C1> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
+          backgroundColor: Colors.black,
           title: const Text("Data Representation"),
         ),
         body: const Padding(

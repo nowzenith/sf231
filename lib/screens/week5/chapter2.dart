@@ -22,6 +22,7 @@ class _W5C2State extends State<W5C2> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Proof"),
+          backgroundColor: Colors.black,
         ),
         body: const Padding(
           padding: EdgeInsets.all(16.0),

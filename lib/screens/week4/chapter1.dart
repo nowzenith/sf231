@@ -42,10 +42,12 @@ class _W4C1State extends State<W4C1> {
           child: Icon(
             _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
           ),
+          backgroundColor: Colors.black,
         ),
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Dijkstra's Algorithm"),
+          backgroundColor: Colors.black,
         ),
         body: Padding(
           padding: EdgeInsets.all(16.0),

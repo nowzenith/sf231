@@ -15,6 +15,7 @@ class _W2C2State extends State<W2C2> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Heap 2"),
+          backgroundColor: Colors.black,
         ),
         body: const Padding(
           padding: EdgeInsets.all(16.0),

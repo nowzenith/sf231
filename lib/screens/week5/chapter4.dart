@@ -22,6 +22,7 @@ class _W5C4State extends State<W5C4> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Huffman Coding"),
+          backgroundColor: Colors.black,
         ),
         body: Padding(
           padding: EdgeInsets.all(16.0),

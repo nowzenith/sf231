@@ -42,10 +42,12 @@ class _W3C2State extends State<W3C2> {
           child: Icon(
             _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
           ),
+          backgroundColor: Colors.black,
         ),
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Depth First Search"),
+          backgroundColor: Colors.black,
         ),
         body: Padding(
           padding: EdgeInsets.all(16.0),

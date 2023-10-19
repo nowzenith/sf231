@@ -15,6 +15,7 @@ class _W1C2State extends State<W1C2> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Memory"),
+          backgroundColor: Colors.black
         ),
         body: const Padding(
           padding: EdgeInsets.all(16.0),

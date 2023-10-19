@@ -41,10 +41,12 @@ class _W1C3State extends State<W1C3> {
           child: Icon(
             _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
           ),
+          backgroundColor: Colors.black,
         ),
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Minimum Spanning Tree"),
+          backgroundColor: Colors.black
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),

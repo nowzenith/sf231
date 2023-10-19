@@ -22,6 +22,7 @@ class _W5C1State extends State<W5C1> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Expression Tree"),
+          backgroundColor: Colors.black,
         ),
         body: const Padding(
           padding: EdgeInsets.all(16.0),

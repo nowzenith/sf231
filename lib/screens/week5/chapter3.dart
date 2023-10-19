@@ -22,6 +22,7 @@ class _W5C3State extends State<W5C3> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Number"),
+          backgroundColor: Colors.black,
         ),
         body: Padding(
           padding: EdgeInsets.all(16.0),
