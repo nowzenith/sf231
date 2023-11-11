@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class DetailsScreen7 extends StatelessWidget {
   _launchURL() async {
-    final Uri url = Uri.parse('https://colab.research.google.com/drive/1q4HahtPd2BEmZeMBKV7STXyTi2_GBnal?usp=sharing');
+    final Uri url = Uri.parse('https://colab.research.google.com/drive/1GI-WZvp1t0yylz2XbQluP4y1i6OTrZAN?usp=sharing');
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }
